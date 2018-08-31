@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Deseja realmente excluir a tarefa "{{tarefa}}"</h1>
+        <p class="lead">Após confirmar a exclusão, não será possível recuperar a tarefa</p>        
+        
+        <a class="btn btn-light btn-lg mr-3" href="/listarTarefas" role="button">Cancelar</a>
+        <button class="btn btn-danger btn-lg" (click)="removeTarefa()">Excluir</button>        
+      </div>
+</div>

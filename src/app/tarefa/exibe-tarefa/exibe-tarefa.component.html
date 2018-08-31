@@ -1,0 +1,26 @@
+
+<div class="card" style="width: 18rem;">    
+    <h4 class="card-header">
+        {{tarefa.titulo}}
+    <br>        
+    </h4>  
+    <div class="card-body">
+      <h5 class="card-title">Descrição</h5>
+      <p class="card-text">{{tarefa.descricao}}</p>
+    </div>
+
+    <div>
+
+      <tf-subtarefas
+      *ngFor="let subtarefa of tarefa.subTarefas"
+      [titulo]="subtarefa.titulo" 
+      [descricao]="subtarefa.descricao"      
+      [idSubtarefa]="subtarefa.idSubTarefa"
+      [finalizado]="subtarefa.finalizado"
+      >
+      </tf-subtarefas>
+      <a href="/cadastrarSubTarefa/{{tarefa.idTarefa}}" class="btn btn-outline-dark mt-3 mb-3 ml-3">Adicionar sub-tarefa</a>
+
+    </div> 
+  </div>
+  <a href="/listarTarefas" class="btn btn-outline-dark btn-lg mt-3">Voltar para lista de tarefas</a>

@@ -1,0 +1,16 @@
+<div class="container">
+    <a href="/cadastrarTarefa" class="btn btn-outline-primary btn-lg mb-3">Adicionar nova tarefa</a>
+  <div class="list-group">
+    <h2>Lista de Tarefas: </h2>
+    <p><ngb-progressbar type="info" [value]="percentual"></ngb-progressbar></p>
+    <ap-tarefas 
+      *ngFor="let tarefa of tarefas" 
+      [titulo]="tarefa.titulo" 
+      [descricao]="tarefa.descricao"
+      [contagem]="tarefa.subTarefas.length"
+      [idTarefa]="tarefa.idTarefa"
+      [finalizado]="tarefa.finalizado">
+    </ap-tarefas>
+
+    </div>
+  </div>

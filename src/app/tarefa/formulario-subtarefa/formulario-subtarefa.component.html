@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Adicionar sub-tarefa</h2>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" >
+          
+  
+      <div class="row align-items-center justify-content-center" >
+          <div class="col">
+              <div class="form-group">
+                  <label for="titulo">Título</label>
+                  <input type="text" class="form-control" placeholder="Título da sub-tarefa" [(ngModel)]="subtarefa.titulo" name="titulo" id="titulo">
+              </div>    
+          </div>
+      </div>
+  
+      <div class="row align-items-center justify-content-center">
+          <div class="col">            
+              <div class="form-group">
+                  <label for="descricao">Descrição</label>
+                  <textarea class="form-control" rows="3" placeholder="Descrição da sub-tarefa" [(ngModel)]="subtarefa.descricao" name="descricao" id="descricao"></textarea>
+              </div>
+          </div>
+      </div>            
+          <div >
+                  <input type="submit" class="btn btn-default" value="Adicionar sub-tarefa">
+          </div>                      
+  </form>
+  </div>

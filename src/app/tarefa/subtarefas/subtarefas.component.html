@@ -1,0 +1,16 @@
+<div class="card-body">
+  <div [hidden]="!finalizado" class="sublinhado">    
+    <h6 class="card-title sublinhado">{{titulo}}</h6>
+    <p class="card-text sub">{{descricao}}</p>
+    <p class="card-text">foi finalizado?: {{finalizado}}</p>
+  </div>
+
+  <div [hidden]="finalizado" >
+      <h6 class="card-title">{{titulo}}</h6>      
+      <p class="card-text">{{descricao}}</p>      
+  </div>
+
+  <a href="/alterarSubtarefa/{{idSubtarefa}}" class="btn btn-outline-dark btn-sm mr-1">Alterar</a>
+  <button [hidden]="finalizado" (click)="finalizarSubtarefa(idSubtarefa)" class="btn btn-outline-dark btn-sm mr-1" >Finalizar</button>  
+  <a href="/removerSubTarefa/{{idSubtarefa}}" class="btn btn-outline-danger btn-sm mr-1">Remover</a>
+</div>

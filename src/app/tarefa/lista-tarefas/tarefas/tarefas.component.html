@@ -1,0 +1,14 @@
+
+
+<div class="list-group-item list-group-item-action flex-column align-items-start">
+  <div class="d-flex w-100 justify-content-between">      
+    <h5 class="mb-1">{{titulo}}</h5>    
+  </div>
+  <p class="mb-1">{{descricao}}</p>
+  <button [hidden]="!finalizado" (click)="finalizarTarefa(idTarefa)" class="btn btn-outline-dark btn-sm mr-1" >Não Finalizada</button>  
+  <button [hidden]="finalizado" (click)="finalizarTarefa(idTarefa)" class="btn btn-outline-dark btn-sm mr-1" >Finalizar</button>          
+  <a href="exibirTarefa/{{idTarefa}}" class="btn btn-outline-dark btn-sm mr-1">Exibir detalhes</a>
+  <a [hidden]="finalizado" href="/alterarTarefa/{{idTarefa}}" class="btn btn-outline-dark btn-sm mr-1">Alterar</a>      
+  <a href="/removerTarefa/{{idTarefa}}" class="btn btn-outline-danger btn-sm mr-1">Excluir</a>    
+  <small class="text-muted">SubTarefas: {{contagem}}</small>    
+</div>      
